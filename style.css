@@ -1,0 +1,550 @@
+/* =========================
+   LLTB ELECTRICAL V3
+   PREMIUM BLACK & GOLD
+========================= */
+
+:root{
+    --gold:#d4af37;
+    --gold-dark:#b8860b;
+    --black:#050505;
+    --dark:#111111;
+    --light:#ffffff;
+    --grey:#999999;
+    --transition:0.3s ease;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--black);
+    color:var(--light);
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.section{
+    padding:100px 0;
+}
+
+.dark-section{
+    background:#0d0d0d;
+}
+
+.section-title{
+    text-align:center;
+    color:var(--gold);
+    font-size:2.5rem;
+    margin-bottom:50px;
+    font-weight:800;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,0.95);
+    backdrop-filter:blur(8px);
+    z-index:1000;
+    border-bottom:1px solid rgba(212,175,55,0.3);
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.logo img{
+    height:70px;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    font-weight:600;
+    transition:var(--transition);
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+.active-nav{
+    color:var(--gold) !important;
+    border-bottom:2px solid var(--gold);
+    padding-bottom:4px;
+}
+
+.quote-nav-btn{
+    border:2px solid var(--gold);
+    color:var(--gold) !important;
+    padding:12px 20px;
+    border-radius:8px;
+    font-weight:700;
+}
+
+.quote-nav-btn:hover{
+    background:var(--gold);
+    color:black !important;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.8)
+    ),
+    url("images/hero.jpg");
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero-content{
+    max-width:900px;
+    z-index:2;
+}
+
+.hero-logo{
+    max-width:320px;
+    margin:0 auto 20px;
+}
+
+.hero-slogan{
+    color:var(--gold);
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.hero-text{
+    font-size:1.2rem;
+    color:#dddddd;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.hero-btn{
+    background:var(--gold);
+    color:black;
+    padding:15px 28px;
+    border-radius:8px;
+    font-weight:700;
+    transition:var(--transition);
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+    background:var(--gold-dark);
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-text,
+.areas-text{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:1.1rem;
+    color:#dddddd;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:#151515;
+    border:1px solid #222;
+    border-radius:12px;
+    overflow:hidden;
+    transition:var(--transition);
+}
+
+.service-card:hover{
+    border-color:var(--gold);
+    transform:translateY(-5px);
+}
+
+.service-card details{
+    padding:25px;
+}
+
+.service-card summary{
+    cursor:pointer;
+    color:var(--gold);
+    font-weight:700;
+    font-size:1.05rem;
+}
+
+.service-card ul{
+    margin-top:20px;
+    padding-left:15px;
+}
+
+.service-card li{
+    margin-bottom:10px;
+    color:#dddddd;
+    list-style:disc;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.feature-card{
+    background:#151515;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    border-left:4px solid var(--gold);
+    font-weight:600;
+}
+
+/* =========================
+   PRICING
+========================= */
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.pricing-card{
+    background:#151515;
+    border:2px solid var(--gold);
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.pricing-card h3{
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:#151515;
+    padding:25px;
+    border-radius:12px;
+    transition:var(--transition);
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+}
+
+.project-card h3{
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+/* =========================
+   REVIEWS
+========================= */
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.review-card{
+    background:#151515;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    border:1px solid #222;
+}
+
+.review-card p{
+    margin-top:15px;
+    color:#dddddd;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.contact-box{
+    background:#151515;
+    border:1px solid #222;
+    border-radius:12px;
+    padding:30px;
+    text-align:center;
+    color:white;
+    transition:var(--transition);
+}
+
+.contact-box:hover{
+    border-color:var(--gold);
+    transform:translateY(-5px);
+}
+
+.contact-box h3{
+    color:var(--gold);
+    margin:15px 0;
+}
+
+/* =========================
+   QUOTE FORM
+========================= */
+
+.quote-intro{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 30px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+form input,
+form textarea{
+    width:100%;
+    background:#151515;
+    border:1px solid #333;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    margin-bottom:20px;
+    font-family:inherit;
+}
+
+form input:focus,
+form textarea:focus{
+    border-color:var(--gold);
+    outline:none;
+}
+
+.submit-btn{
+    background:var(--gold);
+    color:black;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    font-weight:700;
+    cursor:pointer;
+    transition:var(--transition);
+}
+
+.submit-btn:hover{
+    background:var(--gold-dark);
+}
+
+#form-message{
+    margin-top:20px;
+    text-align:center;
+    color:var(--gold);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#050505;
+    border-top:1px solid #222;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.footer-logo img{
+    height:80px;
+    margin:0 auto 20px;
+}
+
+footer p{
+    margin-bottom:10px;
+    color:#bbbbbb;
+}
+
+/* =========================
+   FLOATING BUTTONS
+========================= */
+
+.floating-call,
+.floating-whatsapp{
+    position:fixed;
+    right:20px;
+    width:60px;
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    font-size:1.5rem;
+    z-index:999;
+    transition:var(--transition);
+}
+
+.floating-call{
+    bottom:95px;
+    background:var(--gold);
+    color:black;
+}
+
+.floating-whatsapp{
+    bottom:20px;
+    background:#25D366;
+    color:white;
+}
+
+.floating-call:hover,
+.floating-whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.fade-in{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1s ease;
+}
+
+.fade-in.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .nav-container{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:2.4rem;
+    }
+
+    .hero-logo{
+        max-width:220px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:70px 0;
+    }
+
+    .section-title{
+        font-size:2rem;
+    }
+
+}
